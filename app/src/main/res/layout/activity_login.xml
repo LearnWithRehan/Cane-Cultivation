@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#DCEBCB"
+    tools:context=".LoginActivity">
+
+    <!-- App Title -->
+<!--    <TextView-->
+<!--        android:id="@+id/loginTitle"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Bhageshwor Sugar        &amp;   Chemical Industries"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textColor="#024708"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:maxLines="2"-->
+<!--        android:ellipsize="end"-->
+<!--        android:paddingHorizontal="16dp" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="#024708"
+            android:text="Bhageshwor Sugar"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="#024708"
+            android:text="&amp;"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="#024708"
+            android:text="Chemical Industries"/>
+
+
+
+    </LinearLayout>
+
+
+    <!-- Username Input -->
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="220dp"
+        android:hint="Username"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textPersonName" />
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/edtUsername"
+        android:layout_marginTop="20dp"
+        android:hint="Password"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textPassword" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Login"
+        android:layout_below="@id/edtPassword"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="530dp"
+       android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/petals" />
+    <!-- Footer -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:text="Developed by: Petals Info Pvt. Ltd."
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#888888" />
+</RelativeLayout>

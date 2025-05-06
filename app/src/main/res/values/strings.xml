@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">CULTIVATION</string>
+
+    <string-array name="CANE_TYPE">
+        <item>Select One</item>
+        <item>Sep_P</item>
+        <item>Oct_P</item>
+        <item>R1</item>
+        <item>R2</item>
+    </string-array>
+
+    <string-array name="Sugar_planted_method">
+        <item>Select One</item>
+        <item>Trench</item>
+        <item>Rejar</item>
+        <item>Halo</item>
+
+    </string-array>
+
+    <string-array name="irragationstimes">
+        <item>Select One</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="Weeding">
+        <item>Select One</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+
+    </string-array>
+
+    <string-array name="Helth">
+        <item>Select One</item>
+        <item>Good</item>
+        <item>Better</item>
+        <item>Best</item>
+        <item>Normal</item>
+        <item>Bad</item>
+    </string-array>
+
+    <string-array name="Banding">
+        <item>Select One</item>
+        <item>Done</item>
+        <item>Will do</item>
+        <item>Yes, I will do according Cane Seasons</item>
+    </string-array>
+
+</resources>
