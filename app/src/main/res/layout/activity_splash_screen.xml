@@ -1,61 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DCEBCB">
 
-    <!-- Logo or Icon -->
+    <!-- Top Image Section -->
     <ImageView
         android:id="@+id/logoImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/cultivation"
-        android:contentDescription="Logo"
-        android:layout_marginTop="150dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/canelogo"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:padding="16dp"
+        android:background="#DCEBCB"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/contentLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5" />
 
-    <!-- App Title -->
-    <TextView
-        android:id="@+id/splashText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cane Cultivation"
-        android:textSize="48sp"
-        android:textColor="#1B5E20"
-        android:textStyle="bold"
-        android:fontFamily="cursive"
-        android:layout_marginTop="24dp"
+    <!-- Bottom Content Section -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="#DCEBCB"
         app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Tagline -->
-    <TextView
-        android:id="@+id/tagline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Monitoring System"
-        android:textSize="28sp"
-        android:textColor="#4CAF50"
-        android:fontFamily="cursive"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/splashText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/splashText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cane Cultivation"
+            android:textSize="30sp"
+            android:textColor="#1B5E20"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:gravity="center" />
 
-    <!-- ProgressBar -->
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/tagline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monitoring System"
+            android:textSize="16sp"
+            android:textColor="#388E3C"
+            android:layout_marginTop="6dp"
+            android:gravity="center" />
+
+        <!-- Loader -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:indeterminateTint="#2E7D32"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

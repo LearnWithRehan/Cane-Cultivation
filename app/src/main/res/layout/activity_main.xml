@@ -1,160 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#DCEBCB"
-    android:padding="16dp"
+    android:background="#F5FBEF"
     tools:context=".MainActivity">
 
-    <!-- Header -->
-    <TextView
-        android:id="@+id/txtheader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CANE CULTIVATION"
-        android:gravity="center"
-        android:textSize="26sp"
-        android:fontFamily="cursive"
-        android:textColor="#024708"
-        android:textStyle="bold"
-        android:padding="16dp" />
-
-    <!-- Village Code -->
     <LinearLayout
+        android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Header -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Village Code"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_gravity="center_vertical" />
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="12dp">
 
-        <EditText
-            android:id="@+id/edtvcodeval"
-            android:layout_width="70dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="5dp"
-            android:hint="VCode"
-            android:inputType="number"
-            android:background="@drawable/edittext_bg"
-            android:padding="5dp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txtheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CANE CULTIVATION"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#1B5E20"
+                android:padding="16dp"/>
+        </com.google.android.material.card.MaterialCardView>
 
-        <EditText
-            android:id="@+id/edtvnameval"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:layout_marginStart="12dp"
-            android:hint="Village Name"
-            android:background="@drawable/edittext_bg"
-            android:padding="5dp"
-            android:textStyle="bold"
-            android:focusable="false"
-            android:clickable="false"
-            android:cursorVisible="false" />
-    </LinearLayout>
-
-    <!-- Grower Code -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Input Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Grower Code"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_gravity="center_vertical" />
-
-        <EditText
-            android:id="@+id/edtGcodeval"
-            android:layout_width="70dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="5dp"
-            android:hint="GCode"
-            android:inputType="number"
-            android:background="@drawable/edittext_bg"
-            android:padding="5dp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/edtgnameval"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:layout_marginStart="12dp"
-            android:hint="Grower Name"
-            android:background="@drawable/edittext_bg"
-            android:padding="5dp"
-            android:textStyle="bold"
-            android:focusable="false"
-            android:clickable="false"
-            android:cursorVisible="false" />
-    </LinearLayout>
-
-    <!-- Show Data Button -->
-    <Button
-        android:id="@+id/btnshowdata"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="SHOW DATA"
-        android:textStyle="bold"
-        android:backgroundTint="#024708"
-        android:textColor="#FFFFFF" />
-
-    <!-- Data Table -->
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fillViewport="true"
-        android:scrollbars="horizontal">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="12dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="#A5D6A7"
-                android:padding="10dp">
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="MachineNo" android:textSize="14sp" android:textColor="#024708" />
-                <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="VillageCode" android:textSize="14sp" android:textColor="#024708" />
-                <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="GrowerCode" android:textSize="14sp" android:textColor="#024708"/>
-                <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="GrowerName" android:textSize="14sp" android:textColor="#024708"/>
-                <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="FatherName" android:textSize="14sp" android:textColor="#024708"/>
-                <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="VillageName" android:textSize="14sp" android:textColor="#024708" />
-                <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="SDate" android:textSize="14sp" android:textColor="#024708"/>
-                <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="Variety" android:textSize="14sp" android:textColor="#024708"/>
-                <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="CaneType" android:textSize="14sp" android:textColor="#024708"/>
-                <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="PlotNo" android:textSize="14sp" android:textColor="#024708"/>
-                <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="Katha" android:textSize="14sp" android:textColor="#024708"/>
+                <!-- Village -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Village Details"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D32"
+                    android:layout_marginBottom="6dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtvcodeval"
+                        android:layout_width="70dp"
+                        android:layout_height="45dp"
+                        android:hint="VCode"
+                        android:inputType="number"
+                        android:background="@drawable/edittext_bg"
+                        android:padding="8dp"/>
+
+                    <EditText
+                        android:id="@+id/edtvnameval"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:hint="Village Name"
+                        android:background="@drawable/edittext_bg"
+                        android:padding="8dp"
+                        android:focusable="false"/>
+                </LinearLayout>
+
+                <!-- Grower -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grower Details"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D32"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="6dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtGcodeval"
+                        android:layout_width="70dp"
+                        android:layout_height="45dp"
+                        android:hint="GCode"
+                        android:inputType="number"
+                        android:background="@drawable/edittext_bg"
+                        android:padding="8dp"/>
+
+                    <EditText
+                        android:id="@+id/edtgnameval"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:hint="Grower Name"
+                        android:background="@drawable/edittext_bg"
+                        android:padding="8dp"
+                        android:focusable="false"/>
+                </LinearLayout>
+
+                <!-- Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnshowdata"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="SHOW DATA"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="16dp"
+                    app:cornerRadius="12dp"
+                    android:backgroundTint="#2E7D32"/>
+
             </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-    </HorizontalScrollView>
-</LinearLayout>
+        <!-- Table Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Header Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#A5D6A7"
+                        android:padding="10dp">
+
+                        <!-- FIXED ALL TEXTVIEWS -->
+                        <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="MachineNo"/>
+                        <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="VillageCode"/>
+                        <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="GrowerCode"/>
+                        <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="GrowerName"/>
+                        <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="FatherName"/>
+                        <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="VillageName"/>
+                        <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="SDate"/>
+                        <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="Variety"/>
+                        <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="CaneType"/>
+                        <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="PlotNo"/>
+                        <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="Katha"/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
