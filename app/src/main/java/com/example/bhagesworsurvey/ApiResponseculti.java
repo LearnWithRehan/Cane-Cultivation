@@ -1,6 +1,7 @@
 package com.example.bhagesworsurvey;
 
 public class ApiResponseculti {
+
     private boolean success;
     private String message;
     private String error;

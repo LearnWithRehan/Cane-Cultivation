@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:textSize="35sp"
             android:textStyle="bold"
+            android:fontFamily="cursive"
             android:layout_gravity="center"
             android:textColor="#024708"
             android:text="Bhageshwor Sugar"/>
@@ -41,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="35sp"
+            android:fontFamily="cursive"
             android:textStyle="bold"
             android:layout_gravity="center"
             android:textColor="#024708"
@@ -50,6 +52,7 @@
             android:layout_height="wrap_content"
             android:textSize="35sp"
             android:textStyle="bold"
+            android:fontFamily="cursive"
             android:layout_gravity="center"
             android:textColor="#024708"
             android:text="Chemical Industries"/>
@@ -93,10 +96,12 @@
         android:layout_below="@id/edtPassword"
         android:layout_marginTop="30dp"
         android:textSize="18sp"
+        android:fontFamily="cursive"
         android:textColor="#FFFFFF"
         android:background="@drawable/button_background" />
 
     <ImageView
+        android:id="@+id/logopetals"
         android:layout_width="150dp"
         android:layout_height="170dp"
         android:layout_marginTop="530dp"
@@ -105,6 +110,7 @@
         android:src="@drawable/petals" />
     <!-- Footer -->
     <TextView
+        android:id="@+id/txtlinkpetals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

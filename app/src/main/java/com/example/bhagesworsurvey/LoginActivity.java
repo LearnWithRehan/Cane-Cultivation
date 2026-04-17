@@ -1,10 +1,13 @@
 package com.example.bhagesworsurvey;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +20,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginActivity extends AppCompatActivity {
     private ApiService apiService;
+    private ImageView logopetals;
+    private TextView txtlinkpetals;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,28 @@ public class LoginActivity extends AppCompatActivity {
                 .build();
 
         apiService = retrofit.create(ApiService.class);
+        logopetals = findViewById(R.id.logopetals);
+        txtlinkpetals = findViewById(R.id.txtlinkpetals);
+
+        txtlinkpetals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String txturl = "https://petalsinfotech.in/";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(txturl));
+                view.getContext().startActivity(intent);
+            }
+        });
+
+        logopetals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://petalsinfotech.in/";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                view.getContext().startActivity(intent);
+            }
+        });
 
         // On Login button click
         findViewById(R.id.btnLogin).setOnClickListener(new View.OnClickListener() {

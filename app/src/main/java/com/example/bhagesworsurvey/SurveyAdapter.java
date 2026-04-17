@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class SurveyAdapter extends RecyclerView.Adapter<SurveyAdapter.ViewHolder> {
+public class    SurveyAdapter extends RecyclerView.Adapter<SurveyAdapter.ViewHolder> {
 
     private List<SurveyData> list;
     private OnItemClickListener listener;
@@ -49,7 +49,7 @@ public class SurveyAdapter extends RecyclerView.Adapter<SurveyAdapter.ViewHolder
                 notifyItemChanged(previous);
                 notifyItemChanged(selectedPosition);
 
-                // Get the clicked data
+                 // Get the clicked data
                 SurveyData data = list.get(getAdapterPosition());
 
                 // Start the new activity and pass the SurveyData as a Serializable extra

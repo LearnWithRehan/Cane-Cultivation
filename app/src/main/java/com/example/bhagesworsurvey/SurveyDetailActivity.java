@@ -115,6 +115,7 @@ public class SurveyDetailActivity extends AppCompatActivity {
 
     }
 
+    
     private void setupRetrofit() {
         // Add logging interceptor to see request/response in logcat
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
@@ -346,4 +347,6 @@ public class SurveyDetailActivity extends AppCompatActivity {
             Log.e(TAG, "Error parsing error response", e);
         }
     }
+
+
 }

@@ -12,6 +12,7 @@
         android:text="CULTIVATION DETAILS"
         android:textSize="25dp"
         android:textColor="#024708"
+        android:fontFamily="cursive"
         android:textStyle="bold"
         android:layout_gravity="center"/>
 <LinearLayout
@@ -118,6 +119,7 @@
         android:text="Fill Up Form"
         android:textSize="20sp"
         android:textColor="#024708"
+        android:fontFamily="cursive"
         android:layout_marginTop="2dp"
         android:textStyle="bold"
         android:layout_gravity="center"/>
